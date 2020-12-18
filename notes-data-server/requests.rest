@@ -1,0 +1,57 @@
+GET http://localhost:4000/notes/all
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "Test"
+    }
+}
+
+###
+GET http://localhost:4000/notes/all
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "Test2"
+    }
+}
+
+###
+POST http://localhost:4000/notes/create
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "Test"
+    },
+    "note": {
+        "body": "Test message the other"
+    }
+}
+
+###
+DELETE http://localhost:4000/notes/delete
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "Test"
+    },
+    "noteID": "5f393f02079bb20bfc491f46"
+}
+
+###
+POST http://localhost:4000/notes/update
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "Test"
+    },
+    "note": {
+        "_id": "5f393b4bf5c98208b466c2ed",
+        "title": "",
+        "body": "More testing"
+    }
+}
